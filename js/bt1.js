@@ -54,19 +54,6 @@ function tuyenSinh(){
 }
 document.getElementById("btnKetQua").onclick = tuyenSinh;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 function tinhDTB(diem1,diem2,diem3){
     var dtb = 0;
     dtb = (Number(diem1) + Number(diem2) + Number(diem3));
