@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript buổi5</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- BootStrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- Main css -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="content mt-5">
+            <div class="row" id="myBody">
+                <div class="col-3">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-bai-1" role="tab"
+                            aria-controls="v-pills-home" aria-selected="true"><i class="fa-solid fa-book"></i>Bài 1</a>
+                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-bai-2" role="tab"
+                            aria-controls="v-pills-profile" aria-selected="false"><i class="fa-solid fa-book"></i>Bài 2</a>
+                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-bai-3" role="tab"
+                            aria-controls="v-pills-messages" aria-selected="false"><i class="fa-solid fa-book"></i>Bài 3</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-bai-4" role="tab"
+                            aria-controls="v-pills-settings" aria-selected="false"><i class="fa-solid fa-book"></i>Bài 4</a>
+                    </div>
+                </div>
+                <div class="col-9 ml-5">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-bai-1">
+                            <h3 class="text-center alert alert-info">Quản lý tuyển sinh</h3>
+                            <div class="row mt-3">
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control text-center" id="diemChuan" placeholder="Nhập điểm chuẩn">
+                                </div>
+                                <div class="form-group col-4">
+                                    <select class="form-control text-center" id="khuVuc">
+                                        <option value="0">--Chọn khu vực--</option>
+                                        <option value="2">A</option>
+                                        <option value="1">B</option>
+                                        <option value="0.5">C</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-4">
+                                    <select class="form-control text-center" id="doiTuong">
+                                        <option value="0">--Chọn đối tượng--</option>
+                                        <option value="2.5">1</option>
+                                        <option value="1.5">2</option>
+                                        <option value="1">3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control text-center" id="diem1" placeholder="Điểm môn thứ 1">
+                                </div><div class="form-group col-4">
+                                    <input type="number" class="form-control text-center" id="diem2" placeholder="Điểm môn thứ 2">
+                                </div><div class="form-group col-4">
+                                    <input type="number" class="form-control text-center" id="diem3" placeholder="Điểm môn thứ 3">
+                                </div>
+                               
+                            </div>
+                            <button class="btn btn-success  mr-3" id="btnKetQua">Kết Quả</button>
+                            <div class="alert alert-success mt-3">
+                                <i class="fa-solid fa-hand-point-right"></i>
+                                <span id="ketQua"></span>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-bai-2">
+                            <h3 class="text-center alert alert-info">Tính tiền điện</h3>
+                            <div class="form-group mt-4">
+                                    <div class="row mt-3">
+                                        <div class="form-group col-6">
+                                            <input type="text" class="form-control" id="hoTen" placeholder="Nhập họ tên">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <input type="number" class="form-control" id="kwDien" placeholder="Nhập số kw">
+                                        </div>
+                                    </div>
+                                <button class="btn btn-success" id="btnTinhTienDien">Tính tiền điện</button>
+                                <div class=" alert alert-success mt-3">
+                                    <i class="fa-solid fa-hand-point-right"></i>
+                                    <span id="ketQua2"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-bai-3">
+                            <h3 class="text-center alert alert-info">Đọc số</h3>
+                            <div class="row align-items-center">
+                                <div class="form-group col-6">
+                                    <p>Nhập số 3 chữ số</p>
+                                    <input type="number" class="form-control" id="num3So" placeholder="Nhập số 3 chữ số">
+                                </div>
+                                    
+                            </div>
+                            <button class="btn btn-success" id="btnDoc">Đọc Số</button>
+                            <div class="alert alert-success mt-3">
+                                <i class="fa-solid fa-hand-point-right"></i>
+                                <span id="ketQua3"></span>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-bai-4">
+                            <h3 class="text-center alert alert-info">Tìm sinh viên xa trường nhất</h3>
+                                <div class="form-group">
+                                    <p>Sinh viên 1</p>
+                                    <div class="student">
+                                        <input type="text" class="form-control" id="tenSV1" placeholder="Nhập tên">
+                                        <input type="number" class="form-control" id="toaDoX1" placeholder="Nhập tọa độ x">
+                                        <input type="number" class="form-control" id="toaDoY1" placeholder="Nhập tọa độ y">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>Sinh viên 2</p>
+                                    <div class="student">
+                                        <input type="text" class="form-control" id="tenSV2"  placeholder="Nhập tên">
+                                        <input type="number" class="form-control" id="toaDoX2" placeholder="Nhập tọa độ x">
+                                        <input type="number" class="form-control" id="toaDoY2" placeholder="Nhập tọa độ y">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>Sinh viên 3</p>
+                                    <div class="student">
+                                        <input type="text" class="form-control" id="tenSV3" placeholder="Nhập tên">
+                                        <input type="number" class="form-control" id="toaDoX3" placeholder="Nhập tọa độ x">
+                                        <input type="number" class="form-control" id="toaDoY3" placeholder="Nhập tọa độ y">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>Trường học</p>
+                                    <div class="school">   
+                                        <input type="number" class="form-control" id="toaDoXTH" placeholder="Nhập tọa độ x">
+                                        <input type="number" class="form-control" id="toaDoYTH" placeholder="Nhập tọa độ y">
+                                        <input class="none">
+                                    </div>
+                                </div>
+                            <button class="btn btn-success" id="btnTim">Tìm</button>
+                            <div class="alert alert-success mt-3">
+                                <i class="fa-solid fa-hand-point-right"></i>
+                                <span id="ketQua4"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Jquery , BootStrap 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <!-- Main Js -->
+    <script src="./js/bt1.js"></script>
+    <script src="./js/bt2.js"></script>
+    <script src="./js/bt3.js"></script>
+    <script src="./js/bt4.js"></script>
+</body>
+
+</html>
